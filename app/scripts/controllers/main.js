@@ -46,7 +46,7 @@ angular.module('movieManiaApp')
         image: $scope.newMovieImage,
         description: $scope.newMovieDescription
       };
-      $scope.movies.push(movie);
+      $scope.movie.push(movies);
     };
 
     $scope.checkCategorySelected = function() {

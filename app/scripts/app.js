@@ -25,6 +25,15 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/movie', {
+        templateUrl: 'views/singlemovie.html',
+        controller: 'MovieCtrl'
+      })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl',
+        controllerAs: 'contact'
+      })
       .otherwise({
         redirectTo: '/'
       });
