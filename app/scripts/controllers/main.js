@@ -8,7 +8,12 @@
  * Controller of the movieManiaApp
  */
 angular.module('movieManiaApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, $location, $http) {
+    $http.get('/movies.json').success(function(data) {
+      console.debug(data);
+      $scope.movies = data;
+    })
+
     var movie = [{
       title : 'Ace',
       image: 'http://dthumb.phinf.naver.net/?src=%22http%3A%2F%2Fdbscthumb.phinf.naver.net%2F4599_000_1%2F20161226192103380_Y5MU6XTX0.jpg%2Ffb53_11_i1.jpg%3Ftype%3Dw690_fst%26wm%3DN%22&twidth=587&theight=324&opts=17',
